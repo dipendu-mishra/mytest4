@@ -11,16 +11,18 @@ pipeline {
                 echo 'Hello World'
                 sh 'mvn clean'
             }
+            }
          stage('2. Install Stage') {
             steps {
                 echo 'Installed'
                 sh 'mvn install'
+            }
             }
          stage('3. Packaging Stage') {
             steps {
                 echo 'Packaged'
                 
             }
-        }
-    
+            }
+      }    
 }
