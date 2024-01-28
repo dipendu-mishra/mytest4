@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+    options {
+        // Timeout counter starts AFTER agent is allocated
+        timeout(time: 1, unit: 'SECONDS')
+        maven 'MAVEN_HOME'
+    }
+    stages {
+        stage('1. CLEAN Stage') {
+            steps {
+                echo 'Hello World'
+                sh 'mvn clean'
+            }
+         stage('2. Install Stage') {
+            steps {
+                echo 'Installed'
+                sh 'mvn install'
+            }
+         stage('3. Packaging Stage') {
+            steps {
+                echo 'Packaged'
+                
+            }
+        }
+    }
+}

@@ -17,3 +17,7 @@ buildNumber.properties
 #.project
 # JDT-specific (Eclipse Java Development Tools)
 
+Jenkins Port in windows: C:\Program Files\Jenkins/jenkins.xml 
+8090  
+admin 
+admin
