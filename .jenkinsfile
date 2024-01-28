@@ -1,26 +1,34 @@
 pipeline {
-    agent any
-    tools{
-       maven 'MAVEN_HOME'
-    }
-    stages {
-        stage('1. CLEAN Stage') {
-            steps {
-              //  echo 'Hello World'
-                sh 'mvn clean'
-            }
-            }
-         stage('2. Install Stage') {
-            steps {
-               // echo 'Installed'
-                sh 'mvn install'
-            }
-            }
-         stage('3. Packaging Stage') {
-            steps {
-                echo 'Packaged'
-                
-            }
-            }
-      }    
-}
+	agent any
+	tools {
+	maven 'MAVEN_HOME'
+	}
+	stages {
+		stage('Stage1: Hello Clean Stage 1') {
+			steps {
+				bat 'mvn clean'
+				}
+			}
+		stage ('Stage 2: Test Stage') {
+			steps {
+				bat 'mvn test'
+				}
+			}
+		stage ('Stage 3: My Package'){
+			steps {
+				bat 'mvn package'
+				}
+			}			
+		stage ('Stage 4: My Final Build Stage'){
+			steps {
+				bat 'mvn install'
+				}
+			}	
+		stage ('Stage Final: Build Success'){
+			steps {
+				echo  'Build Success!'
+				}
+			}
+		
+		}
+	}		
