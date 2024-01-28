@@ -6,14 +6,14 @@ pipeline {
     stages {
         stage('1. CLEAN Stage') {
             steps {
-                echo 'Hello World'
+              //  echo 'Hello World'
                 sh 'mvn clean'
             }
             }
          stage('2. Install Stage') {
             steps {
-                echo 'Installed'
-               // sh 'mvn install'
+               // echo 'Installed'
+                sh 'mvn install'
             }
             }
          stage('3. Packaging Stage') {
