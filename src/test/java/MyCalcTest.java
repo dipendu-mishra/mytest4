@@ -1,5 +1,7 @@
 import static org.junit.Assert.*;
 
+import org.junit.Test;
+
 import MyPack1.MyCalc;
 
 public class MyCalcTest {
