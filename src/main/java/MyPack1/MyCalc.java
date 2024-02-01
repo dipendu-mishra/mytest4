@@ -9,6 +9,6 @@ public class MyCalc {
 	public static void main(String []args)
 	{
 		MyCalc myCalc=new MyCalc();
-		System.out.println(myCalc.sum(10, 20));
+		System.out.println("Sum:"+myCalc.sum(10, 20));
 	}
 }
